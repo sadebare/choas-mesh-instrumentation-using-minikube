@@ -22,11 +22,11 @@ Each experiment was run using a custom YAML file inside the **[chaos-mesh/](./ch
 
 ## 📸 Screenshots
 
-Find all experiment results and UI screenshots in the `images/` folder.
+Find all experiment results and UI screenshots in the **[screenshots/](./screenshots/)** folder.
 
 ## 🚀 Usage
 
 To run any experiment, apply the YAML using:
 
 ```bash
-kubectl apply -f experiments/<experiment-name>.yaml
+kubectl apply -f chaos-mesh/<experiment-name>.yaml
