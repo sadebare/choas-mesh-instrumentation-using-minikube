@@ -1,13 +1,15 @@
 apiVersion: chaos-mesh.org/v1alpha1
 kind: PodChaos
 metadata:
-  name: pod-kill-example
-  namespace: chaos-mesh
+  name: custom-pod-failure-experiment
+  namespace: chaos-mesh 
 spec:
   action: pod-kill
-  mode: one
+  mode: all 
   selector:
     namespaces:
-      - default
+      - chaos-experiment 
     labelSelectors:
       'app': 'react-app'
+  duration: '30s'
+  gracePeriod: 10 

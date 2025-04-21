@@ -1,0 +1,16 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: custom-cpu-stress-test-experiment
+spec:
+  mode: all  # Apply chaos to all matching pods
+  selector:
+    namespaces:
+      - chaos-experiment
+    labelSelectors:
+      app: react-app
+  stressors:
+    cpu:
+      workers: 4  # Number of CPU workers to simulate load (adjust according to your pod CPU limits)
+      load: 80  # 80% CPU load on each worker
+  duration: 10m  # Stress for 10 minutes

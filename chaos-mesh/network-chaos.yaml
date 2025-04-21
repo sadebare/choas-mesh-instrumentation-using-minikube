@@ -1,0 +1,16 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: custom-network-bandwidth-failure-experiment
+spec:
+  action: bandwidth
+  mode: all
+  selector:
+    namespaces:
+      - chaos-experiment 
+    labelSelectors:
+      'app': 'react-app'
+  bandwidth:
+    rate: '2mbps'
+    limit: 20971520
+    buffer: 10000
