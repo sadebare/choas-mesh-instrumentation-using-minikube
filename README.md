@@ -5,8 +5,8 @@ This project demonstrates how to use **[Chaos Mesh](https://chaos-mesh.org/)** t
 ## 🔧 Setup
 
 - React app is deployed in a custom namespace (`chaos-experiment`)
-- Exposed using a `NodePort` service
-- Chaos Mesh installed and used for running various chaos experiments
+- Exposed using a `NodePort` service or port-forward on service
+- [Chaos Mesh](https://chaos-mesh.org/docs/quick-start/) installed and used for running various chaos experiments
 
 ## 🧪 Chaos Experiments
 
